@@ -1,0 +1,18 @@
+.book {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .book button {
+    background-color: #ff5252;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .book button:hover {
+    background-color: #e53935;
+  }
+  
