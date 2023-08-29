@@ -1,0 +1,21 @@
+form {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+form input {
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #1976d2;
+}
