@@ -6,6 +6,10 @@ import PropTypes from 'prop-types';
 function Book({
   category, title, author, onDelete, itemId,
 }) {
+  const handleDelete = () => {
+    onDelete(itemId);
+  };
+
   return (
     <div className="book">
       <p>{itemId}</p>
@@ -13,10 +17,9 @@ function Book({
       <h3>{title}</h3>
       <p>
         Author:
-        {' '}
         {author}
       </p>
-      <button type="button" onClick={onDelete}>
+      <button type="button" onClick={handleDelete}>
         Remove
       </button>
     </div>
