@@ -1,21 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import BookList from './components/BookList';
 import BookForm from './components/BookForm';
 import Navigation from './components/Navigation';
 
 function App() {
-  const [books, setBooks] = useState([]);
-
-  const handleAddBook = (newBook) => {
-    setBooks([...books, newBook]);
-  };
-
-  const handleDeleteBook = (index) => {
-    const updatedBooks = books.filter((_, i) => i !== index);
-    setBooks(updatedBooks);
-  };
-
   return (
     <BrowserRouter>
       <div className="App">
@@ -25,8 +14,8 @@ function App() {
             path="/"
             element={(
               <>
-                <BookList books={books} onDelete={handleDeleteBook} />
-                <BookForm onAdd={handleAddBook} />
+                <BookList />
+                <BookForm />
               </>
             )}
           />
