@@ -8,7 +8,7 @@ function BookList() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchBooks()); // Fetch books when the component mounts
+    dispatch(fetchBooks());
   }, [dispatch]);
 
   const handleRemoveBook = (itemId) => {
