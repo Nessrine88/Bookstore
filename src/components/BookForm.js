@@ -1,22 +1,22 @@
-import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux'; // Import useSelector
-import { addBook } from '../redux/books/booksSlice';
+import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchBooks, addBook } from '../redux/books/booksSlice';
 import '../style/BookForm.css';
 
 function BookForm() {
   const [itemId, setItemId] = useState('');
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
   const dispatch = useDispatch();
 
-  // Use useSelector to access the initial category value
-  const initialCategory = useSelector((state) => state.categories.categories[0]);
-
-  const [category, setCategory] = useState(initialCategory); // Set initial value
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, [dispatch]);
 
   const handleAdd = (e) => {
     e.preventDefault();
-    if (itemId || (title && author && category)) {
+    if (itemId && title && author && category) {
       dispatch(addBook({
         item_id: itemId,
         title,
@@ -26,13 +26,13 @@ function BookForm() {
       setItemId('');
       setTitle('');
       setAuthor('');
-      setCategory(initialCategory); // Reset category to initial value after adding book
+      setCategory('');
     }
   };
 
   return (
     <div>
-      <form>
+      <form onSubmit={handleAdd}>
         <input
           type="text"
           placeholder="ID"
@@ -51,7 +51,13 @@ function BookForm() {
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
         />
-        <button type="button" onClick={handleAdd}>
+        <input
+          type="text"
+          placeholder="Category"
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+        />
+        <button type="submit">
           Add Book
         </button>
       </form>
