@@ -32,7 +32,7 @@ function BookForm() {
 
   return (
     <div className="formm">
-      <h2 className="H2">ADD NEW BOOK</h2>
+      <h2 className="AdBok">ADD NEW BOOK</h2>
       <form onSubmit={handleAdd}>
         <input
           className="titleInput"
