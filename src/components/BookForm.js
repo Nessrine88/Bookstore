@@ -31,33 +31,28 @@ function BookForm() {
   };
 
   return (
-    <div>
+    <div className="formm">
+      <h2 className="H2">ADD NEW BOOK</h2>
       <form onSubmit={handleAdd}>
         <input
+          className="titleInput"
           type="text"
-          placeholder="ID"
-          value={itemId}
-          onChange={(e) => setItemId(e.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="Title"
+          placeholder="Book title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
-        <input
-          type="text"
-          placeholder="Author"
-          value={author}
-          onChange={(e) => setAuthor(e.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="Category"
+        <select
+          className="catInput"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
-        />
-        <button type="submit">
+        >
+          <option value="">Category</option>
+          <option value="option1">Fiction</option>
+          <option value="option2">Action</option>
+          <option value="option3">Romance</option>
+        </select>
+
+        <button className="formBtn" type="submit">
           Add Book
         </button>
       </form>

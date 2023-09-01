@@ -1,17 +1,135 @@
 .book {
   border: 1px solid #ccc;
-  padding: 10px;
+  padding: 2rem;
+  padding-bottom: 0.75rem;
   margin: 10px;
-  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.book button {
-  background-color: #ff5252;
-  color: white;
+.book h3 {
+  width: 12.313rem;
+  height: 1.813rem;
+  margin: 0.188rem 20.188rem 0 0;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+}
+
+.catg {
+  width: 3.063rem;
+  height: 1.125rem;
+  margin: 0 2.438rem 0 0;
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+.auth {
+  width: 6.688rem;
+  height: 1.188rem;
+  margin: 0.25rem 0 0;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.percent {
+  font-size: 2rem;
+}
+
+.state {
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+.last {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  width: fit-content;
+  border-left: #ccc solid 0.5px;
+  padding-left: 5rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background-color: #0290ff;
+  color: #fff;
+  padding: 0.5rem 1rem;
   border: none;
   cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
 }
 
-.book button:hover {
-  background-color: #e53935;
+.chapter {
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: var(--black-two);
+}
+
+.comment {
+  opacity: 0.5;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+.firstBtns {
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+  border: none;
+  margin-top: 1.5em;
+  background-color: transparent;
+}
+
+.bbtn {
+  border-left: #ccc solid 0.5px;
+  border-right: #ccc solid 0.5px;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.left {
+  width: fit-content;
 }
