@@ -5,15 +5,15 @@ import profile from '../assets/profile.PNG';
 
 function Navigation() {
   return (
-    <div className="nav-container">
+    <div className="nav-container flex ">
 
-      <div className="logo">
+      <div className="logo common">
 
         <h2>Bookstore CMS</h2>
       </div>
-      <div className="list">
+      <div className="list flex ">
         <div className="ul">
-          <ul>
+          <ul className="flex common">
             <li>
               <Link to="/">Home</Link>
             </li>

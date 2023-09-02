@@ -14,18 +14,18 @@ function Book({
   return (
     <div className="book">
       <div className="left">
-        <p className="catg">{category}</p>
-        <h3>{title}</h3>
-        <p className="auth">
+        <p className="catg common">{category}</p>
+        <h3 className="common">{title}</h3>
+        <p className="auth common">
           {author}
         </p>
-        <button className="firstBtns" type="button" onClick={handleDelete}>
+        <button className="firstBtns common" type="button" onClick={handleDelete}>
           Comments
         </button>
-        <button className="firstBtns bbtn" type="button" onClick={handleDelete}>
+        <button className="firstBtns bbtn common" type="button" onClick={handleDelete}>
           Remove
         </button>
-        <button className="firstBtns" type="button" onClick={handleDelete}>
+        <button className="firstBtns common" type="button" onClick={handleDelete}>
           Edit
         </button>
       </div>
@@ -33,11 +33,11 @@ function Book({
       <p className="percent">
         60%
         <br />
-        <span className="state">Completed</span>
+        <span className="state common">Completed</span>
       </p>
       <div className="last">
-        <p className="comment">Current Chapter</p>
-        <p className="chapter">Chapter 17</p>
+        <p className="comment common">Current Chapter</p>
+        <p className="chapter common">Chapter 17</p>
         <button type="button" className="btn">UPDATE PROGRESS</button>
       </div>
     </div>

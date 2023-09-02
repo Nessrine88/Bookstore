@@ -16,7 +16,7 @@ function BookForm() {
 
   const handleAdd = (e) => {
     e.preventDefault();
-    if (itemId && title && author && category) {
+    if (title && category) {
       dispatch(addBook({
         item_id: itemId,
         title,
@@ -32,24 +32,24 @@ function BookForm() {
 
   return (
     <div className="formm">
-      <h2 className="AdBok">ADD NEW BOOK</h2>
+      <h2 className="AdBok common ">ADD NEW BOOK</h2>
       <form onSubmit={handleAdd}>
         <input
-          className="titleInput"
+          className="titleInput common"
           type="text"
           placeholder="Book title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
         <select
-          className="catInput"
+          className="catInput common "
           value={category}
           onChange={(e) => setCategory(e.target.value)}
         >
           <option value="">Category</option>
-          <option value="option1">Fiction</option>
-          <option value="option2">Action</option>
-          <option value="option3">Romance</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Action">Action</option>
+          <option value="Romance">Romance</option>
         </select>
 
         <button className="formBtn" type="submit">

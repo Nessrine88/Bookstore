@@ -11,20 +11,20 @@ function BookList() {
     dispatch(fetchBooks());
   }, [dispatch]);
 
-  const handleRemoveBook = (itemId) => {
-    dispatch(removeBook(itemId));
+  const handleRemoveBook = (title) => {
+    dispatch(removeBook(title));
   };
 
   return (
     <div className="book-list">
       {books.map((book) => (
         <Book
-          key={book.item_id}
+          key={book.title}
           title={book.title}
           author={book.author}
           category={book.category}
           itemId={book.item_id}
-          onDelete={() => handleRemoveBook(book.item_id)}
+          onDelete={() => handleRemoveBook(book.title)}
         />
       ))}
     </div>

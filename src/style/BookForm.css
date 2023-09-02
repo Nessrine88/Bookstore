@@ -16,19 +16,15 @@ form input {
   cursor: pointer;
   width: 16%;
   margin-right: 0.5rem;
-}
-
-.formBtn:hover {
-  background-color: #1976d2;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.813rem;
+  font-weight: bold;
+  border-radius: 5px;
 }
 
 .AdBok {
-  font-family: 'Montserrat', sans-serif;
   font-size: 1.25rem;
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: -0.18px;
   color: #888;
 }
@@ -40,11 +36,32 @@ form input {
 .titleInput {
   width: 58%;
   padding: 1rem;
+  font-size: 1rem;
+  font-weight: normal;
+  letter-spacing: -0.15px;
+  border: 0.5px solid #e8e8e8;
+}
+
+.common {
+  font-family: 'Montserrat', sans-serif;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
+.auth {
+  height: 1.188rem;
+  margin: 0.25rem 0 0;
+  color: #4386bf;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.875rem;
 }
 
 .catInput {
   width: 25%;
-  border: 1px solid #ccc;
-  color: #888;
+  font-size: 1rem;
   padding-left: 1rem;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+  border: 0.5px solid #e8e8e8;
 }
