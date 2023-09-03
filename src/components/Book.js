@@ -2,6 +2,7 @@
 import React from 'react';
 import '../style/Book.css';
 import PropTypes from 'prop-types';
+import cercle from '../assets/cercle.PNG';
 
 function Book({
   category, title, author, onDelete, itemId,
@@ -12,16 +13,33 @@ function Book({
 
   return (
     <div className="book">
-      <p>{itemId}</p>
-      <p>{category}</p>
-      <h3>{title}</h3>
-      <p>
-        Author:
-        {author}
+      <div className="left">
+        <p className="catg common">{category}</p>
+        <h3 className="common">{title}</h3>
+        <p className="auth common">
+          {author}
+        </p>
+        <button className="firstBtns common" type="button" onClick={handleDelete}>
+          Comments
+        </button>
+        <button className="firstBtns bbtn common" type="button" onClick={handleDelete}>
+          Remove
+        </button>
+        <button className="firstBtns common" type="button" onClick={handleDelete}>
+          Edit
+        </button>
+      </div>
+      <img src={cercle} alt="" />
+      <p className="percent">
+        60%
+        <br />
+        <span className="state common">Completed</span>
       </p>
-      <button type="button" onClick={handleDelete}>
-        Remove
-      </button>
+      <div className="last">
+        <p className="comment common">Current Chapter</p>
+        <p className="chapter common">Chapter 17</p>
+        <button type="button" className="btn">UPDATE PROGRESS</button>
+      </div>
     </div>
   );
 }
